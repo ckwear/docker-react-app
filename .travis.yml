@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start Createing an image with dockefile"
-  - docker build -t markcha/react -f Dockerfile.dev ./
+  - docker build -t markcha/react -f Dockerfile.dev .
 script:
   - docker run -e CI=true markcha/react npm run test -- --coverage
 
